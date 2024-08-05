@@ -343,7 +343,7 @@ html {
 
 .card-category p {
   font-size: 2.5rem;
-  color: #fff;
+  color: #000000;
   text-transform: capitalize;
   position: relative;
 }
@@ -352,7 +352,7 @@ html {
   content: '';
   width: 2.5rem;
   height: 2px;
-  background-color: #fff;
+  background-color: #000000;
   position: absolute;
   bottom: -1rem;
   left: 50%;
@@ -361,7 +361,7 @@ html {
 
 .card-category span {
   font-size: 1.6rem;
-  color: #fff;
+  color: #000000;
   cursor: pointer;
 }
 

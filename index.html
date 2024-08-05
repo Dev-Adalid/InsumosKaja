@@ -1,230 +1,576 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA PERFU</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Incluir script externo desde un enlace -->
-    <script src="https://example.com/archivo.js" defer></script>
-    
-    <!-- Script para accesibilidad -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const increaseTextSizeButton = document.getElementById('increase-text-size');
-            const decreaseTextSizeButton = document.getElementById('decrease-text-size');
-            
-            increaseTextSizeButton.addEventListener('click', function() {
-                document.body.style.fontSize = 'larger';
-            });
-            
-            decreaseTextSizeButton.addEventListener('click', function() {
-                document.body.style.fontSize = 'smaller';
-            });
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <div class="container-hero">
-            <div class="container hero">
-                <div class="customer-support" aria-label="Soporte al cliente">
-                    <i class="fa-solid fa-headset" aria-hidden="true"></i>
-                    <div class="content-customer-support">
-                        <span class="text">Soporte al cliente</span>
-                        <span class="number">341765976534</span>
-                    </div>
-                </div>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>LA PERFU</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">341765976534</span>
+						</div>
+					</div>
 
-                <div class="container-logo">
-                    <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
-                    <h1 class="logo"><a href="/">LA PERFU</a></h1>
-                </div>
+					<div class="container-logo">
+						<i class="fa-solid fa-mug-hot"></i>
+						<h1 class="logo"><a href="/">LA PERFU</a></h1>
+					</div>
 
-                <div class="container-user">
-                    <i class="fa-solid fa-user" aria-hidden="true"></i>
-                    <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
-                    <div class="content-shopping-cart">
-                        <span class="text">Carrito</span>
-                        <span class="number">(0)</span>
-                    </div>
-                </div>
+					<div class="container-user">
+						<i class="fa-solid fa-user"></i>
+						<i class="fa-solid fa-basket-shopping"></i>
+						<div class="content-shopping-cart">
+							<span class="text">Carrito</span>
+							<span class="number">(0)</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <!-- Botones de accesibilidad -->
-                <div class="accessibility-controls">
-                    <button aria-label="Aumentar tamaño del texto" id="increase-text-size">A+</button>
-                    <button aria-label="Disminuir tamaño del texto" id="decrease-text-size">A-</button>
-                </div>
-            </div>
-        </div>
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Moda Express</a></li>
+						<li><a href="#">Accesorios</a></li>
+						<li><a href="#">Clientas Contentas</a></li>
+						<li><a href="#">Más</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
 
-        <div class="container-navbar">
-            <nav class="navbar container" role="navigation" aria-label="Menú principal">
-                <ul id="primary-menu" class="menu" role="menubar">
-                    <li role="none"><a role="menuitem" href="#">Inicio</a></li>
-                    <li role="none"><a role="menuitem" href="#">Moda Express</a></li>
-                    <li role="none"><a role="menuitem" href="#">Accesorios</a></li>
-                    <li role="none"><a role="menuitem" href="#">Clientas Contentas</a></li>
-                    <li role="none"><a role="menuitem" href="#">Más</a></li>
-                    <li role="none"><a role="menuitem" href="#">Blog</a></li>
-                </ul>
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+		</header>
 
-                <form class="search-form" role="search">
-                    <label for="search" class="visually-hidden">Buscar</label>
-                    <input id="search" type="search" placeholder="Buscar..." aria-label="Buscar">
-                    <button class="btn-search" type="submit">
-                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                        <span class="visually-hidden">Buscar</span>
-                    </button>
-                </form>
-            </nav>
-        </div>
-    </header>
+		<section class="banner">
+			<div class="content-banner">
+				<p>LA PERFU</p>
+				<h2>Dedicada a la belleza Natural <br />Pensado para ustedes</h2>
+				<a href="#">Comprar ahora</a>
+			</div>
+		</section>
 
-    <section class="banner">
-        <div class="content-banner">
-            <p>LA PERFU</p>
-            <h2>Dedicada a la belleza Natural <br>Pensado para ustedes</h2>
-            <a href="#">Comprar ahora</a>
-        </div>
-    </section>
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito a nivel mundial</span>
+						<p>En pedido superior a $15.000</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>100% garantía de devolución de dinero</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p>Ofrece bonos especiales con regalo</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos 24/7 al 341685969</p>
+					</div>
+				</div>
+			</section>
 
-    <main class="main-content">
-        <section class="container container-features">
-            <div class="card-feature">
-                <i class="fa-solid fa-plane-up"></i>
-                <div class="feature-content">
-                    <span>Envío gratuito a nivel mundial</span>
-                    <p>En pedido superior a $15.000</p>
-                </div>
-            </div>
-            <div class="card-feature">
-                <i class="fa-solid fa-wallet"></i>
-                <div class="feature-content">
-                    <span>Contrareembolso</span>
-                    <p>100% garantía de devolución de dinero</p>
-                </div>
-            </div>
-            <div class="card-feature">
-                <i class="fa-solid fa-gift"></i>
-                <div class="feature-content">
-                    <span>Tarjeta regalo especial</span>
-                    <p>Ofrece bonos especiales con regalo</p>
-                </div>
-            </div>
-            <div class="card-feature">
-                <i class="fa-solid fa-headset"></i>
-                <div class="feature-content">
-                    <span>Servicio al cliente 24/7</span>
-                    <p>LLámenos 24/7 al 341685969</p>
-                </div>
-            </div>
-        </section>
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-Labiales Navi">
+						<p>Labiales Navi</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-Perfume Natura">
+						<p>Perfume Natura</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-Brochas MAC">
+						<p>Brochas MAC </p>
+						<span>Ver más</span>
+					</div>
+				</div>
+			</section>
 
-        <section class="container top-categories">
-            <h1 class="heading-1">Mejores Categorías</h1>
-            <div class="container-categories">
-                <div class="card-category category-Labiales Navi">
-                    <p>Labiales Navi</p>
-                    <span>Ver más</span>
-                </div>
-                <div class="card-category category-Perfume Natura">
-                    <p>Perfume Natura</p>
-                    <span>Ver más</span>
-                </div>
-                <div class="card-category category-Brochas MAC">
-                    <p>Brochas MAC</p>
-                    <span>Ver más</span>
-                </div>
-            </div>
-        </section>
+			<section class="container top-products">
+				<h1 class="heading-1">Mejores Productos</h1>
 
-        <section class="container top-products">
-            <h1 class="heading-1">Mejores Productos</h1>
+				<div class="container-options">
+					<span class="active">Destacados</span>
+					<span>Más recientes</span>
+					<span>Mejores Vendidos</span>
+				</div>
 
-            <div class="container-options">
-                <span class="active">Destacados</span>
-                <span>Más recientes</span>
-                <span>Mejores Vendidos</span>
-            </div>
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="Imagenes/rubor.png" alt="Paleta de rubores con seis tonos diferentes en una mano. Los tonos incluyen rosas, corales y rojos. La paleta tiene un espejo integrado en la tapa." />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Rubores Girls</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.000 <span>$5.300</span></p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="Imagenes/base.png" alt="Botella de base de maquillaje HD Matte de Pink 21 Cosmetics, etiquetada como 'urbancover FOUNDATION BASE FACIAL'. La botella tiene una tapa dorada y se muestra con un fondo rosa pálido. A la derecha de la botella hay una muestra del tono de la base."
+							/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Sombra tropical</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5700 <span>$7300</span></p>
+						</div>
+					</div>
+					<!--  producto 3-->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="Imagenes/sombra21.png" alt=""ruta/a/tu/imagen/sombra21.png" alt="Paleta de sombras de ojos Tropical de Pink 21 Cosmetics. La paleta incluye 14 tonos de sombras en colores vibrantes como rosa, naranja, rojo, y tonos metálicos dorados y marrones, todo en un empaque decorado con flores tropicales y patrones en blanco y negro."
+							/>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Rubor Pink 21</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3200</p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="labialesmate.png" alt="Tres labiales de Pink 21 Cosmetics con acabado matte en diferentes tonos de rojo" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Labial Mate Pink 21</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5600</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-            <div class="container-products">
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="imagenes/nara.png" alt="Paleta de sombras de ojos con 15 tonos diferentes. Incluye tonos cálidos, brillantes y mate, dispuestos en una cuadrícula de 5 filas por 3 columnas. La tapa es transparente con la inscripción 'EYESHADOW & GLITTERS'.">
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                      
-                        <h3>Rubores Girls</h3>
-                        <p class="price">$4.000 <span>$5.300</span></p>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="imagenes/base.png" alt="Botella de base de maquillaje HD Matte de Pink 21 Cosmetics, etiquetada como 'urbancover FOUNDATION BASE FACIAL'. La botella tiene una tapa dorada y se muestra con un fondo rosa pálido. A la derecha de la botella hay una muestra del tono de la base.">
-                        <span class="">-22%</span>
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                       
-                        <h3>Base Pink 21</h3>
-                        <p class="price">$5700 <span>$7300</span></p>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="Imagenes/OF3.PNG" alt="Rubor Pink 21">
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                       
-                        <h3>Rubor Pink 21</h3>
-                        <p class="price">$5800 <span>$7300</span></p>
-                    </div>
-                </div>
-                <div class="card-product">
-                    <div class="container-img">
-                        <img src="imagenes/labialesmate.png" alt="Tres labiales de Pink 21 Cosmetics con acabado matte en diferentes tonos de rojo">
-                        <div class="button-group">
-                            <span><i class="fa-regular fa-eye"></i></span>
-                            <span><i class="fa-regular fa-heart"></i></span>
-                            <span><i class="fa-solid fa-code-compare"></i></span>
-                        </div>
-                    </div>
-                    <div class="content-card-product">
-                       
-                        <h3>Perfume Secret</h3>
-                        <p class="price">$4300 <span>$6100</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<section class="gallery">
+				<img
+					src="jema2.png"
+					alt="jema1.png"
+					class="jema1.png"
+				/><img
+					src="jema2.png"
+					alt="Gallery Img2"
+					class="gallery-img-2"
+				/><img
+					src="make2.png"
+					alt="Gallery Img3"
+					class="gallery-img-3"
+				/><img
+					src="jema6.png"
+					alt="Gallery Img4"
+					class="gallery-img-4"
+				/><img
+					src="jema7.png"
+					alt="Gallery Img5"
+					class="gallery-img-5"
+				/>
+			</section>
 
-        <section class="container featured-brands">
-            <h1 class="heading-1">Marcas Destacadas</h1>
-            <div class="container-brands">
-                <img src="Imagenes/jema2.png" alt="Marca 1">
-                <img src="imagenes/marca2.png" alt="Marca 2">
-                <img src="imagenes/marca3.png" alt="Marca 3">
-                <img src="imagenes/marca4.png" alt="Marca 4">
-            </div>
-        </section>
-    </main>
+			<section class="container specials">
+				<h1 class="heading-1">Ofertas Especiales</h1>
 
-   
-</body>
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="OF3.PNG" alt="perfume gigot" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Perfume Gigot</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4600 <span>$5300</span></p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="IMAGENES/JEMA5.PNG" alt="ofertas 2.png"/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Espejo Make UP</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$570 <span>$730</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="IMAGENES/OF1.PNG" alt="Botella de fijador de maquillaje Matte Finish Mist & Fix de la marca Tejar. Controla el aceite, hidrata y fija el maquillaje. Presentación en spray de 50 ml con tapa negra." />
+							<span class="discount">-30%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Fijador Tejar</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3850 <span>$5550</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="OF2.PNG" alt="Cafe Liqueurs" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Labial Lips</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5660</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container blogs">
+				<h1 class="heading-1">Últimos Blogs</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="cliente3.png" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Igna Kopp</h3>
+							<span>2 Enero 2024</span>
+							<p>
+								"El trato en La Perfu es inmejorable. Los vendedores son amables, conocedores y siempre dispuestos a ayudarte a encontrar el perfume ideal. Además, ofrecen una excelente atención post-venta y te garantizan la máxima calidad en todos sus productos. ¡Una experiencia de compra única y satisfactoria!"
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="cliente2.png" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Lucia Morel</h3>
+							<span>12 Abril 2024</span>
+							<p>
+								"La Perfu es mucho más que una simple tienda de perfumes. Ofrece una amplia gama de productos para el cuidado personal, como cremas, jabones y velas aromáticas. Además, cuentan con servicios especializados como asesoramiento personalizado, muestras gratuitas y talleres de perfumería. ¡Todo lo que necesitas para sentirte bien por dentro y por fuera!"							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="clientes1.png" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Lorena Lucero</h3>
+							<span>10 Julio de 2024</span>
+							<p>
+								"Si buscas un perfume que te haga destacar, LA Perfu es el lugar indicado. Aquí encontrarás fragancias exclusivas y nicho, creadas por los mejores perfumistas del mundo. El equipo te asesorará para encontrar el aroma perfecto que refleje tu personalidad. ¡Un lujo al alcance de tu mano!
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: Buenos Aires al 1200. Rosario, Santa Fé.
+							</li>
+							<li>Teléfono: 341657578</li>
+							<li>Fax: 55555300</li>
+							<li>EmaiL: laperfu@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por HIKA  &copy; 2024
+					</p>
+
+					<img src="img/payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
